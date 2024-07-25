@@ -5,9 +5,9 @@
   - value có thể là tất cả các kiểu dữ liệu
 
   var myInfo = { 
-      name: 'trong nam',
+      name: 'bruce duong',
       age: 18,
-      address: 'Tuyen Quang'
+      address: 'Kyoto'
       getName: function(){
           return this.name  
       }
@@ -48,7 +48,7 @@
 
 # 3. Object constructor
   >> Giống như một công thức, một bản thiết kết chung
-  >> Giống class bên java
+  >> Giống class bên c#, java
   VD: function User(firstName, lastName, age){
         this.firstName = firstName
         this.lastName = lastName

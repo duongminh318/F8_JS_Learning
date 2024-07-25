@@ -1,3 +1,6 @@
+/** Area Recangle
+ * Tính chu vi hình chữ nhật
+ */
 // nhap lieu
 var chieuDai = prompt("chieu dai: ");
 var chieuRong = prompt("Nhập chieu rong: ");
