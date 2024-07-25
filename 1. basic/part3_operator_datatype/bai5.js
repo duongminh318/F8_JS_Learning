@@ -2,7 +2,7 @@
 
 var r = prompt("nhap vao ban kinh r");
 
-const pi = 3.14;
+const pi = Math.PI;
 
 console.log("chu vi hinh tron la: " + (r * 2) * pi);
 console.log("dien tich hinh tron la: " + (r * r) * pi);

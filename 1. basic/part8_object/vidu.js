@@ -26,7 +26,7 @@ var author= new User("Son Dang", "D", "avatar");
 var user= new User("Vu Nguyen", "Coder", "avatar2");
 
 author.title="chia se dao tai f8";
-user.comment= " lieu co khao asp ko";
+user.comment= " lieu co khoá asp ko";
 
 console.log(author)
 console.log(user)
