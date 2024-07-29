@@ -36,9 +36,9 @@
   >> tạo key bằng biến
   var ageKey = age
   var myInfo = { 
-      name: 'trong nam',
-      [ageKey]: 18,
-      address: 'Tuyen Quang'
+      name: 'adrew',
+      [ageKey]: 25,
+      address: 'Kyoto'
   }
 
   >> xóa cặp key và value
@@ -63,7 +63,7 @@
       var user = new User('Son', 'Dang', 20)
 
   >> thêm những thuộc tính riêng cho từng đối tượng
-  VD: author.address = 'Tuyen Quang'
+  VD: author.address = 'Ha noi'
   VD: user.height = 1m75
 
   >> thêm thuộc tính bên ngoài bản thiết kế (hàm tạo)

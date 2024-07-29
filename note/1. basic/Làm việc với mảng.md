@@ -1,7 +1,7 @@
 # 1. Các cách tạo mảng
   >> Cách 1: dùng dấu []
   VD: var arrA = [
-      'tran trong nam',
+      'Duong Khoi Minh',
       18,
       null,
       false,
@@ -9,14 +9,14 @@
   ]
   >> Cách 2: dùng new Array()
   VD: var arrA = new Array(
-      'tran trong nam',
+      'Duong Khoi Minh',
       18,
       null,
       false,
       function(){},
   )
   
-  - nên đùng cách số 1
+  - nên dùng cách số 1
   - không nên dùng cách số 2 vì: 
     + dài dòng hơn
     + phải khởi tạo một đối tượng nên sẽ chậm hơn
@@ -25,7 +25,7 @@
   - mỗi phần tử của mảng cách nhau bằng dấu phẩy
   - các phần tử được đánh vị trí tự động bắt đầu từ 0
   - phần tử trong mảng có thể là tất cả các kiểu dữ liệu
-  - Array.isArray(): kiểm tra xem có phải là mảng hay không
+  - Array.isArray(): kiểm tra xem có phải là mảng hay không= true
 
 # 3. Truy xuất mảng
   >> length
@@ -36,7 +36,7 @@
   >> lấy giá trị theo vị trí
   - cú pháp: <tên_mảng>[ <vị_trí_của_gián_trị_cần_lấy> ]
 
-  VD: arrA[0] --> 'tran trong nam'
+  VD: arrA[0] --> 'Duong Khoi Minh'
 
 # 4. Làm việc với mảng
   - keyword: js array methods

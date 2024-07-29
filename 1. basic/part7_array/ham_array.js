@@ -20,49 +20,52 @@ var languages=[
     'PHP'
 ];
 
-// console.log(languages.join(" +"));
+//độ dài mảng
+console.log(languages.length)
 
+//in ra phần từ
+console.log(languages[0]);
 
-console.log(languages.pop()); // xoá element cuối mảng
-//console.log(languages.pop()); // xoá element cuối mảng
-//console.log(languages.pop()); // xoá element cuối mảng
-// trả về phần tử đã xoá
+//kết mảng thành chuỗi 
+console.log(languages.join(" +"));
+
+// xoá element cuối mảng, trả về phần tử đã xoá
+console.log(languages.pop()); 
 // nếu xoá hết các phần tử của mảng sẽ trả về undefined
 
-console.log(languages.push("python", "C#"))// thêm element vào cuối mảng
-// trả length khi đã thêm
+// thêm element vào cuối mảng, trả về độ dài mới của mảng
+console.log(languages.push("python", "C#"));
 
-console.log(languages.shift()); // xoá element đầu mảng
-// trả về phần tử đã xoá
+// xoá element đầu mảng, trả về phần tử đã xoá
+console.log(languages.shift()); 
 
-console.log(languages.unshift("Dart", "C++")); // thêm element đầu mảng
-// trả length khi đã thêm
-
-console.log(languages);
+// thêm vào đầu mảng, trả length khi đã thêm
+//console.log(languages.unshift("Dart", "C++"));
+//console.log(languages);
 
 // languages.splice(start_index, so phan tu muon xoa)
 languages.splice(1, 2)
+
 // thay vì xoá thì chèn (vị trí muốn chèn, 0, giá trị chèn)
 languages.splice(1, 0, 'Dart')
 
-console.log(languages);
-var languages2= [
-    "nodejs",
-    "reactjs",
-    "html",
-
-];
+// console.log(languages);
+// var languages2= [
+//     "nodejs",
+//     "reactjs",
+//     "html",
+// ];
 
 // hợp nhất hai mảng
-var languages3= languages.concat(languages2);
-console.log(languages3);
+//ar languages3= languages.concat(languages2);
+//console.log(languages3);
 
 
 // cắt mảng (start index, end index) - copy
 //console.log(languages3.slice(1, 3));
 //console.log(languages3.slice(-1, -2));
-console.log(languages3[languages3.length -1])
+//console.log(languages3[languages3.length -1])
 
 
-var list= [1, 2, 3];
-console.log(list.length);
+//var list= [1, 2, 3];
+//console.log(list.length);
