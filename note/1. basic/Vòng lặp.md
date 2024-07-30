@@ -49,7 +49,7 @@
 
 >> cách hoạt động
 - lặp qua hết tất cả các key của từng phần tử trong arr || obj
->>> lấy ra từng key của object, tương tự như forech c#
+>>> lấy ra từng key của object, tương tự như foreach c#
 # 3. Vòng lặp for of (lặp qua value của đối tượng)
  >> cú pháp
  for(var <bieu_thuc_1> of <bieu_thuc_2>){
@@ -78,7 +78,7 @@
      console.log(Object.keys(arr2)) --> ['a', 'b', 'c', 'd']
 
  >> Object.values()
- - truyền vào một obj, trả về arr gồm các keys
+ - truyền vào một obj, trả về arr gồm các value
  VD: var arr2 = { a: 1, b: 2, c: 3, d: 4 }
      console.log(Object.values(arr2)) --> [1, 2, 3, 4]
 
@@ -103,14 +103,16 @@
   >> cách hoạt động
   - lần đầu tiên sẽ thực hiện các dòng code trong dấu {} mà không cần xét điều kiện
     từ lần thứ hai trở đi nếu điều kiện đúng sẽ thực hiện các dòng code trong dấu {}
-
+- giông while nhưng cho vào rồi mới kiểm tra điều kiện, while thì kt rồi mới cho vào
 # 6. Câu lệnh Break và Continue 
   >> break
   - nếu break ở trong vòng lặp thì vòng lặp gần nhất đang chứa nó sẽ bị dừng không tiếp tục lặp nữa
+  - thoả mãn dk --> dừng vòng lặp luôn
 
   >> continue
   - tất cả các dòng code bên dưới continue sẽ được bỏ qua
   - nếu continue ở trong vòng lặp thì sẽ bỏ qua các dòng code bên dưới và tiếp tục vòng lặp mới
+  - thoả mãn điều kiện --> bước qua 
 
 # 7. Vòng lặp lồng nhau
   >> VD:
@@ -137,7 +139,9 @@
   4                 (dòng 127)
 
   -> bỏ đi câu lệnh dòng 125 ta sẽ có được kết quả như mong muốn 1 2 3 4
-
+>> cách hoạt động
+- lặp bên ngoài (lần 1) để lấy ra list các mảng con
+- lặp bên trong (lặp thêm lần nữa) lấy ra các phần tử trong mảng con
 # 8. Đệ quy
   - là một hàm gọi lại chính nó
   - phải xác định được [điểm_dừng] và [logic_tạo_ra_điểm_dừng]
