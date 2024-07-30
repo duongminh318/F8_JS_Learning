@@ -42,6 +42,7 @@
   - khi sử dụng toán tử == mà có > 3 trường hợp
 
 # 4. Toán tử 3 ngôi
+>> cách hoạt động gần giống như if else
   >> cú pháp
   <dieu_kien> ? --code-- : --code
 

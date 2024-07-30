@@ -65,8 +65,8 @@
   >> thêm những thuộc tính riêng cho từng đối tượng
   VD: author.address = 'Ha noi'
   VD: user.height = 1m75
-
-  >> thêm thuộc tính bên ngoài bản thiết kế (hàm tạo)
+>> prototpye = hàm nguyên mẫu
+  >> thêm thuộc tính bên ngoài bản thiết kế (hàm tạo) 
   - cú pháp: <tên_hàm_tạo>.prototype.<tên_thuộc_tính> = <giá_trị>
   - các thuộc tính thêm vào bằng prototype sẽ nằm ở __proto__
 
@@ -76,6 +76,7 @@
       }
 
 # 4. Đối tượng Date
+>> lấy ra các giá trị về thời gian
   >> Tạo đối tượng date
   - dùng từ khóa: new Date()
 
@@ -83,20 +84,21 @@
 
   >> các thuộc tính
   - Lấy ra năm: getFullYear()
-  - lấy ra tháng: getMonth() + 1
+  - lấy ra tháng: getMonth() + 1 >>0 -11
   - lấy ra ngày: getDate()
   - lấy ra giờ: getHours()
   - lấy ra phút: getMinutes()
   - lấy ra giây: getSeconds() 
-  
+
+  - key word link document: javascript date object mozila
 # 5. Math object
   >> Math.PI
   - trả về số PI
 
   >> Math.round()
-  - làm tròn số
+  - làm tròn số, thành số nguyên
 
-  >> Math.abs()
+  >> Math.abs(-1) >> 1
   - trả về giá trị tuyệt đối
 
   >> Math.ceil()
@@ -106,7 +108,7 @@
   - làm tròn dưới
 
   >> Math.random()
-  - trả về số thập phân ngẫu nhiên nhỏ hơn 1
+  - trả về số thập phân ngẫu nhiên nhỏ hơn 1 --> 0 đến 1
 
   >> Math.min()
   - truyền vào 1 dãy số và trả về số nhỏ nhất

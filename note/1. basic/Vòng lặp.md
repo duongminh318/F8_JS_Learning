@@ -49,7 +49,7 @@
 
 >> cách hoạt động
 - lặp qua hết tất cả các key của từng phần tử trong arr || obj
-
+>>> lấy ra từng key của object, tương tự như forech c#
 # 3. Vòng lặp for of (lặp qua value của đối tượng)
  >> cú pháp
  for(var <bieu_thuc_1> of <bieu_thuc_2>){
@@ -84,7 +84,7 @@
 
 >> các dùng for để duyệt obj
 - dùng Object.values() chuyển thành arr chứa các value rồi dùng for of
-
+>> lấy ra từng value của object
 # 4. Vòng lặp while (lặp khi điều kiện đúng)
   >> cú pháp
   while(<dieu_kien>){
