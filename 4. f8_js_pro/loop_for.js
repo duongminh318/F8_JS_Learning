@@ -1,9 +1,5 @@
 /**
  * Tổng hợp bài tập vòng lặp For #1 
-Cập nhật tháng 2 năm 2024
-
-Hãy hoàn thành toàn bộ các yêu cầu sau:
-
 1. Viết hàm listEvenNumbers nhận vào hai tham số là start và end, 
 sau đó in ra tất cả các số chẵn từ start đến end sử dụng vòng lặp for.
 2. Viết hàm sumOddNumbers nhận vào một mảng số và trả về tổng của tất cả các 
@@ -208,3 +204,4 @@ const sumPrimes  = (start , end) => {
 };
 // Sample usage
 // console.log(sumPrimes(10, 20)); // 60
+
