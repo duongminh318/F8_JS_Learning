@@ -30,8 +30,7 @@ const findGCD = (a, b) => {
         let tempForFind = b;
         b = a % b; 
         a = tempForFind;
-    }
-    
+    }   
     return a;
 }
 
