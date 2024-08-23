@@ -219,6 +219,11 @@
   <tên_mảng>.reduce(<callBack>, <giá_trị_của_biến_lưu_trữ>){
     return <biểu_thức_logic_tích_trữ>
   }
+>> 
+    array.reduce((accumulator, currentValue, currentIndex, array) => {
+        // Thực hiện các thao tác trên accumulator và currentValue
+        return accumulator;
+  }, initialValue);
 
   >> cách sử dụng
   - dùng để tính lũy một giá trị nào đó
