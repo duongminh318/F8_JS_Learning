@@ -192,3 +192,70 @@ const calculateGrade = (scores) => {
         return 'F';
     }
 };
+
+/**
+ * 3. Checks if a string is a palindrome, ignoring case.
+ * @param {string} str - The string to be checked.
+ * @return {boolean} True if the string is a palindrome, false otherwise.
+ */
+function isPalindrome(str) {
+    // i đi từ đầu; j đi từ cuối mảng
+    for (let i = 0, j = str.length - 1; i < j; i++, j--) {
+        if (str[i] !== str[j]) {
+            return false;
+        }
+    }
+    return true;
+}
+// Sample usage
+// console.log(isPalindrome("racecar")); // true
+// console.log(isPalindrome("hello")); // false
+
+/**
+ * 4. Finds the missing number in an array containing all numbers from 1 to n except one.
+ * @param {number[]} arr - An array of integers from 1 to n missing one number.
+ * @param {number} n - The maximum number in the range.
+ * @return {number} The missing number.
+ */
+const findMissingNumber = (arr) => {
+    // Tính n từ độ dài của mảng
+    const n = arr.length + 1;
+
+    // Tính tổng dự kiến của dãy từ 1 đến n
+    const expectedSum = (n * (n + 1)) / 2;
+
+    // Tính tổng thực tế của các phần tử trong mảng
+    const actualSum = arr.reduce((acc, num) => acc + num, 0);
+
+    // Số thiếu chính là sự chênh lệch giữa tổng dự kiến và tổng thực tế
+    return expectedSum - actualSum;
+}
+
+// Sample usage
+// console.log(findMissingNumber([1, 2, 4, 5, 6], 6)); // 3
+// console.log(findMissingNumber([3, 7, 1, 2, 8, 4, 5], 8)); // 6
+// console.log(findMissingNumber([1, 2, 3, 4], 4)); // 0
+
+/**
+ * 5. Finds the maximum number of consecutive 1s in a binary array.
+ * @param {number[]} nums - A binary array consisting of only 0s and 1s.
+ * @return {number} The maximum number of consecutive 1s.
+ */
+const maxConsecutiveOnes = (arr) => {
+    let maxCount = 0;  // Biến để lưu độ dài chuỗi 1 dài nhất
+    let currentCount = 0;  // Biến để lưu độ dài chuỗi 1 hiện tại
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === 1) {
+            currentCount++;  // Nếu gặp 1, tăng đếm chuỗi 1 hiện tại
+            maxCount = Math.max(maxCount, currentCount);  // Cập nhật chuỗi dài nhất nếu cần
+        } else {
+            currentCount = 0;  // Gặp 0 thì đặt lại đếm chuỗi 1 hiện tại
+        }
+    }
+
+    return maxCount;  // Trả về độ dài chuỗi 1 dài nhất
+}
+
+// console.log(maxConsecutiveOnes([1, 1, 0, 1, 1, 1])); // 3
+// console.log(maxConsecutiveOnes([1, 0, 1, 1, 0, 1])); // 2
