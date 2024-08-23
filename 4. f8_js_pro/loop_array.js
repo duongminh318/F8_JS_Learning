@@ -51,3 +51,59 @@ function alternateSum  (arr, value){
 // Sample usage
 // console.log(alternateSum([10, 5, 6, 3])); // 8 (10 - 5 + 6 - 3)
 // console.log(alternateSum([1, 2, 3, 4, 5])); // 3 (1 - 2 + 3 - 4 + 5)
+
+/**
+ * 3. Calculates the sum of the squares of each element in an array.
+ * @param {number[]} arr - An array of integers.
+ * @return {number} The sum of squares of the array elements.
+ */
+const sumOfSquares = (arr) => {
+    let sumOfSquaresArray = 0;
+    // duyệt mảng
+    for (let i = 0; i < arr.length; i++) {
+        sumOfSquaresArray += arr[i] * arr[i];
+    }
+    return sumOfSquaresArray;
+};
+
+// Sample usage
+// console.log(sumOfSquares([1, 2, 3])); // 14 (1^2 + 2^2 + 3^2 = 14)
+// console.log(sumOfSquares([4, 5, 6])); // 77 (4^2 + 5^2 + 6^2 = 77)
+
+/**
+ * 4. Filters even numbers from an array and calculates their sum.
+ * @param {number[]} arr - An array of integers.
+ * @return {number} Sum of the even numbers.
+ */
+function filterEvensAndSum(arr) {
+    let sumOfEven = 0;
+    // duyệt mảng
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            sumOfEven += arr[i];
+        }
+    }
+    return sumOfEven;
+}
+// Sample usage
+// console.log(filterEvensAndSum([1, 2, 3, 4, 5, 6])); // 12 (2 + 4 + 6 = 12)
+// console.log(filterEvensAndSum([12, 14, 15, 19, 20, 100])); // 146 (12 + 14 + 20 + 100 = 146)
+
+/**
+ * 5. Finds the longest string in an array.
+ * @param {string[]} arr - An array of strings.
+ * @return {string} The longest string in the array. If there are multiple strings of the same maximum length, the first one is returned.
+ */
+function findLongestWord (arr) {
+    let longest  = "";
+    // duyệt mảng
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].length  > longest.length) {
+          longest= arr[i];
+        }
+    }
+    return longest;
+}
+// Sample usage
+// console.log(findLongestWord(["apple", "banana", "cherry", "date"])); // banana
+// console.log(findLongestWord(["hello", "world", "this", "is", "great"])); // hello
