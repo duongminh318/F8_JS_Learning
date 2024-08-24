@@ -283,3 +283,23 @@ for (let i = 1; i <= 9; i++) {
     }
     i<9 && console.log('----------');  // i>= 9 sẽ không in ra dòng -------
   }
+
+  /**
+   * Viết hàm printMultiplicationTable không nhận tham số, 
+   * in ra bảng cửu chương từ 2 đến 9 sử dụng vòng lặp for lồng nhau.
+   */
+  /**
+ * Prints the multiplication table from 2 to 9.
+ */
+const printMultiplicationTable = () => {
+    for (let i = 2; i < 10; i++) {
+        // Vòng lặp ngoài chạy từ 2 đến 9 để in bảng cửu chương từ 2 đến 9
+        console.log(`Bảng cửu chương ${i}:`); // In tiêu đề bảng cửu chương
+        for (let j = 1; j <= 10; j++) {
+            // Vòng lặp trong chạy từ 1 đến 10 để in từng dòng của bảng cửu chương
+            console.log(`${i} x ${j} = ${i * j}`); // In ra kết quả phép nhân
+        }
+        //if (i < 9) console.log("---------"); // Nếu bảng cửu chương không phải bảng cuối cùng, in ra dòng ngăn cách
+    }
+};
+
