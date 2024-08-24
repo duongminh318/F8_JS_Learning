@@ -244,7 +244,6 @@ const findMissingNumber = (arr) => {
 const maxConsecutiveOnes = (arr) => {
     let maxCount = 0;  // Biến để lưu độ dài chuỗi 1 dài nhất
     let currentCount = 0;  // Biến để lưu độ dài chuỗi 1 hiện tại
-
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] === 1) {
             currentCount++;  // Nếu gặp 1, tăng đếm chuỗi 1 hiện tại
@@ -253,9 +252,34 @@ const maxConsecutiveOnes = (arr) => {
             currentCount = 0;  // Gặp 0 thì đặt lại đếm chuỗi 1 hiện tại
         }
     }
-
     return maxCount;  // Trả về độ dài chuỗi 1 dài nhất
 }
 
 // console.log(maxConsecutiveOnes([1, 1, 0, 1, 1, 1])); // 3
 // console.log(maxConsecutiveOnes([1, 0, 1, 1, 0, 1])); // 2
+
+/** MẢNG LỒNG NHAU */
+// duyệt mảng đa chiều
+let numbers = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+let totalSum = 0;
+
+for (let i = 0; i < numbers.length; i++) {
+    for (let j = 0; j < numbers[i].length; j++) {
+        totalSum += numbers[i][j];
+    }
+}
+
+console.log(totalSum);
+
+// bảng cửu chương
+for (let i = 1; i <= 9; i++) {
+    for (let j = 1; j <= 9; j++) {
+      console.log(`${i} * ${j} = ${i * j}`);
+    }
+    i<9 && console.log('----------');  // i>= 9 sẽ không in ra dòng -------
+  }

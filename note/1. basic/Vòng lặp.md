@@ -120,7 +120,6 @@
       [1, 2],
       [3, 4],
   ]
-
   - dùng vòng lặp lồng in ra dãy số 1 2 3 4 từ mảng myArr
 
   for(var i = 0; i < myArr.length; i++){
