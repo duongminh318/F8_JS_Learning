@@ -19,15 +19,15 @@
   cú pháp: <tên_obj>.<key_mới> = <value_mới>
   hoặc:    <tên_obj>['<key_mới>'] = <value_mới>     
 
-  VD: myInfo.email = 'trantrongnam138003@gmail.com'
-  VD: myInfo.['email'] = 'trantrongnam138003@gmail.com'
+  VD: myInfo.email = 'duongminh318@gmail.com'
+  VD: myInfo.['email'] = 'duongminh318@gmail.com'
 
   >> lấy value ra ngoài 
   cú pháp: <tên_obj>.<key>
   hoặc:    <tên_obj>['<key>']
 
-  VD: myInfo.name --> 'trong nam'
-  VD: myInfo.['name'] --> 'trong nam'
+  VD: myInfo.name --> 'duong minh'
+  VD: myInfo.['name'] --> 'duong minh'
 
   - nếu lấy ra value không có trong obj sẽ trả về undefined
 
@@ -115,5 +115,44 @@
 
   >> Math.max()
   - truyền vào 1 dãy số và trả về số lớn nhất
-  
+
+
+# 6. so sánh 2 object
+- Dùng toán tử === để so sánh tham chiếu
+- So sánh hai biến object xem chúng có cùng tham chiếu đến một object không.
+>> 
+      let car1 = { make: 'Toyota', model: 'Corolla' };
+      let car2 = { make: 'Toyota', model: 'Corolla' };
+      let car3 = car1;
+
+      // Khác tham chiếu
+      console.log(car1 === car2); // false
+
+      // Cùng tham chiếu
+      console.log(car1 === car3); // true
+
+# Các cách so sánh objects 
+## Dùng toán tử === để so sánh tham chiếu
+- Sử dụng JSON.stringify để so sánh nội dung
+- Chuyển đổi objects thành chuỗi JSON và so sánh chuỗi đó.
+>>
+      let student1 = { id: 1, name: "Bob" };
+      let student2 = { id: 1, name: "Bob" };
+
+      console.log(JSON.stringify(student1) === JSON.stringify(student2));// --> true
+
+-sử dụng Json. stringify --> gặp khó khăn khi hai object có các element khác thứ tự nhau
+
+## Dùng thư viện bên ngoài như Lodash
+- Sử dụng hàm _.isEqual() từ thư viện Lodash để so sánh sâu (deep compare) giữa các objects. (lodash.com)
+- nhúng link lodash và html
+>>
+      <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+      <script>
+        let obj1 = { part: { id: 10, name: 'Top' } };
+        let obj2 = { part: { id: 10, name: 'Top' } };
+
+        console.log(_.isEqual(obj1, obj2)); // true
+      </script>
+
 
