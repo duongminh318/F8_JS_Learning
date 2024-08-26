@@ -8,12 +8,14 @@ const tom = {
     name: 'tom',    // Tên của nhân vật Tom
     hp: 1000,       // Sức khỏe của Tom (Health Points)
     atk: 50,        // Sức tấn công của Tom (Attack Power)
+    defense:5,      // chỉ số phòng thủ
 
     // Phương thức tấn công mục tiêu
     attack(target) {
         // Giảm sức khỏe của mục tiêu dựa trên sức tấn công của Tom
-        target.hp -= this.atk;
-        console.log(`${this.name} "phang" ${target.name}, gây ${this.atk} sát thương, ${target.name} còn ${target.hp} máu`);
+        let damage= Math.max(this.atk -target.defense,0);
+        target.hp -= damage;
+        console.log(`${this.name} "phang" ${target.name}, gây ${damage} sát thương, ${target.name} còn ${target.hp} máu`);
     },
 
     // Phương thức kiểm tra xem Tom còn sống hay không
@@ -27,12 +29,14 @@ const jerry = {
     name: 'jerry',  // Tên của nhân vật Jerry
     hp: 500,        // Sức khỏe của Jerry (Health Points)
     atk: 20,        // Sức tấn công của Jerry (Attack Power)
+    defense:20,     // chỉ số phòng thủ
 
     // Phương thức tấn công mục tiêu
     attack(target) {
         // Giảm sức khỏe của mục tiêu dựa trên sức tấn công của Jerry
-        target.hp -= this.atk;
-        console.log(`${this.name} "phang" ${target.name}, gây ${this.atk} sát thương, ${target.name} còn ${target.hp} máu`);
+        let damage= Math.max(this.atk -target.defense,0); //xat thương= tấn công - phòng thủ đối phương
+        target.hp -= damage;
+        console.log(`${this.name} "phang" ${target.name}, gây ${damage} sát thương, ${target.name} còn ${target.hp} máu`);
     },
 
     // Phương thức kiểm tra xem Jerry còn sống hay không
