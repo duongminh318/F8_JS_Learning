@@ -1,44 +1,59 @@
 /**
+ * 1. tạo ra đối tượng tom, jerry
+ *  - hp/health: máu
+ *  - Attack power/ATK: tấn công
+ *  - defense: phòng thủ
+ *  - speed: tốc độ
+ *  - Counter attack: độ phản công
+ */
+/**
  * Object Contructor
  */
 // bản thiết kế object
-function Character(name, hp, atk, defense) {
+function Character(name, hp, atk, defense, speed, counterRate) {
     this.name = name;
     this.hp = hp;
     this.atk = atk;
     this.defense = defense;
-    this.attack = function (target) {
-        // Giảm sức khỏe của mục tiêu dựa trên sức tấn công của Tom
-        let damage = Math.max(this.atk - target.defense, 0);
+    this.speed= speed;
+    this.counterRate= counterRate;
+    this.attack = function(target) {
+        const damage = Math.max(this.atk - target.defense, 0);
         target.hp -= damage;
-        console.log(`${this.name} "phang" ${target.name}, gây ${damage} sát thương, ${target.name} còn ${target.hp} máu`);
+        console.log(`${this.name} tấn công ${target.name}, gây ra ${damage} sát thương. ${target.name} còn lại ${target.hp} máu.`);
     };
-    this.isAlive = function () {
+    this.isAlive = function() {
         return this.hp > 0;
     };
-
 }
 
-
-// tạo đối tượng mới từ bản thiết kế
-let tom = new Character("Tom", 1000, 50, 5);
-let jerry = new Character("jerry", 500, 20, 20);
 
 // Bắt đầu vòng lặp chiến đấu
-let round = 1;  // Khởi tạo biến đếm số vòng đấu
-while (jerry.isAlive() && tom.isAlive()) {  // Vòng lặp tiếp tục khi cả Jerry và Tom đều còn sống
-    console.log("Round " + round);  // In ra số vòng đấu hiện tại
-    if (round % 2 === 0) {  // Nếu vòng đấu là số chẵn
-        tom.attack(jerry);  // Tom tấn công Jerry
-    } else {  // Nếu vòng đấu là số lẻ
-        jerry.attack(tom);  // Jerry tấn công Tom
+function battle(char1, char2) {
+    let round = 1;
+
+    while (char1.isAlive() && char2.isAlive()) {
+        console.log(`Round ${round}:`);
+
+        if (char1.speed > char2.speed) {
+            char1.attack(char2);
+            if (char2.isAlive()) char2.attack(char1);
+        } else {
+            char2.attack(char1);
+            if (char1.isAlive()) char1.attack(char2);
+        }
+
+        round++;
     }
-    round++;  // Tăng biến đếm vòng đấu lên 1
+    // kiểm tra xem ai là người chiến thắng
+    const winner = char1.isAlive() ? char1 : char2;
+    console.log(`${winner.name} wins!`);
+    return winner;
 }
 
-// Kiểm tra ai là người thắng sau khi vòng lặp kết thúc
-if (tom.hp > 0) {  // Nếu Tom còn sống
-    console.log("Tom win");  // Tom là người thắng
-} else {  // Nếu Tom không còn sống (Jerry còn sống)
-    console.log("Jerry win");  // Jerry là người thắng
-}
+// Tạo 2 nhân vật để tham gia trận chiến
+const tom = new Character("Tom", 1000, 50, 5, 30, 0.5); // tốc độ 30
+const jerry = new Character("Jerry", 500, 20, 20, 10, 0.2); // tốc độ 10
+
+// Bắt đầu trận đấu
+battle(tom, jerry);
