@@ -18,7 +18,7 @@
         const person = new Person("John", 30);
         console.log(person); --> Person {name: "John", age: 30}
 
-- Một instance là một đối tượng cụ thể được tạo từ một hàm tạo. Instance kế thừa tất cả các thuộc tính và phương thức từ hàm tạo mà nó được tạo ra, nhưng giá trị của các thuộc tính có thể khác nhau giữa các instance.
+- Một instance (biến thể) là một đối tượng cụ thể được tạo từ một hàm tạo. Instance kế thừa tất cả các thuộc tính và phương thức từ hàm tạo mà nó được tạo ra, nhưng giá trị của các thuộc tính có thể khác nhau giữa các instance.
 
 >> Example: 
 
@@ -30,9 +30,30 @@
         const myCar = new Car("Toyota", "Corolla");
         console.log(myCar);      -->Car {make: "Toyota", model: "Corolla"}
 
+# Build in Javascript Constructors
+- Các hàm tạo dựng sẵn trong JavaScript là những hàm được cung cấp sẵn bởi ngôn ngữ lập trình để tạo ra các kiểu dữ liệu cơ bản hoặc phức tạp một cách nhanh chóng và tiện lợi. Các hàm tạo này bao gồm: String, Number, Array, Object, Function, v.v.
 
+>> Example
 
+        let str = new String("Hello");
+        let num = new Number(123);
+        let arr = new Array(1, 2, 3);
+        let obj = new Object();
+        let func = new Function("x", "y", "return x + y");
 
+- trả về đối tượng khi sử dụng từ khóa new
+>> Example
+
+        let strObj = new String("hello");
+        console.log(typeof strObj); // object
+
+        //new Object() hoặc cú pháp literal {} đều tạo ra một đối tượng mới.
+            let obj = new Object();
+            console.log(typeof obj); // object
+
+        //new Function() tạo một đối tượng Function mới, cho phép bạn định nghĩa hàm động.
+            let funcObj = new Function("a", "b", "return a + b");
+            console.log(typeof funcObj); // function
 # Prototypes
 - công dụng của Prototypes trong JavaScript:
 Chia sẻ phương thức và thuộc tính:
@@ -65,5 +86,16 @@ Khả năng mở rộng đối tượng:
 
             alice.greet(); // Output: "Hello, my name is Alice"
             bob.greet();   // Output: "Hello, my name is Bob"
-- Trong ví dụ này, greet là một phương thức được định nghĩa trong Person.prototype. Cả alice và bob đều có thể sử dụng phương thức greet thông qua prototype mà không cần sao chép phương thức này vào mỗi đối tượng.
+- greet là một phương thức được định nghĩa trong Person.prototype. Cả alice và bob đều có thể sử dụng phương thức greet thông qua prototype mà không cần sao chép phương thức này vào mỗi đối tượng.
 
+
+# Autoboxing
+-  các giá trị nguyên thủy (primitive values) như number, string, và boolean được tự động chuyển đổi thành đối tượng tương ứng khi cần thiết.
+- giúp giá trị nguyên thủy sử dụng các phương thức và thuộc tính của đối tượng tương ứng
+
+>> Example
+
+        let str = "hello";
+        console.log(str.toUpperCase()); // "HELLO"
+- cùng với prototype hỗ trở js hướng đối tượng tốt hơn
+- Autoboxing và prototype trong JavaScript thực sự hỗ trợ khả năng hướng đối tượng của ngôn ngữ này một cách hiệu quả. Autoboxing cung cấp một cách tiện lợi để làm việc với các giá trị nguyên thủy như thể chúng là đối tượng, trong khi hệ thống prototype cho phép kế thừa và mở rộng các chức năng của đối tượng, mang lại tính linh hoạt và mạnh mẽ trong phát triển ứng dụng.

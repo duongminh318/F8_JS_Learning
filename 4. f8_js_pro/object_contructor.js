@@ -42,10 +42,16 @@ function battle(char1, char2) {
     while (char1.isAlive() && char2.isAlive()) {
         console.log(`Round ${round}:`);
     
-        if (char1.speed >= char2.speed) {
+        if (char1.speed > char2.speed) {
             battleRound(char1, char2);
-        } else {
+        } else if (char2.speed > char1.speed) {
             battleRound(char2, char1);
+        }else{ // khi speed bằng nhau xác suất để dc đánh trước là 50/5
+            if(Math.random()<0.5){
+                battleRound(char1, char2);
+            }else{
+                battleRound(char2, char1);
+            }
         }
     
         round++;
