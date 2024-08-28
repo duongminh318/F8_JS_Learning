@@ -99,3 +99,26 @@ Khả năng mở rộng đối tượng:
         console.log(str.toUpperCase()); // "HELLO"
 - cùng với prototype hỗ trở js hướng đối tượng tốt hơn
 - Autoboxing và prototype trong JavaScript thực sự hỗ trợ khả năng hướng đối tượng của ngôn ngữ này một cách hiệu quả. Autoboxing cung cấp một cách tiện lợi để làm việc với các giá trị nguyên thủy như thể chúng là đối tượng, trong khi hệ thống prototype cho phép kế thừa và mở rộng các chức năng của đối tượng, mang lại tính linh hoạt và mạnh mẽ trong phát triển ứng dụng.
+
+# Prototype Chain
+- Chuỗi prototype trong JavaScript là một cơ chế mà các đối tượng có thể kế thừa các thuộc tính và phương thức từ các đối tượng khác. 
+- Mỗi đối tượng có một thuộc tính __proto__ trỏ tới prototype của nó, tạo thành một chuỗi liên kết các đối tượng.
+>> Example
+
+        // khao báo 1 object
+        function Person(name) {
+            this.name = name;
+            }
+
+            Person.prototype.greet = function() {
+            console.log(`My name is ${this.name}`);
+        };
+        //khởi tạo bằng new
+        const alice = new Person('Alice');
+        // gọi fucntion greet 
+        alice.greet();
+        console.log(alice.__proto__ === Person.prototype); // -->true
+
+- giúp tối ưu bộ nhớ và tăng hiệu quả trong việc tái sử dụng mã nguồn. Khi một phương thức hoặc thuộc tính không tồn tại trên một đối tượng, JavaScript sẽ tìm kiếm trong chuỗi prototype.
+- tiết kiệm bộ nhớ bằng cách chia sẻ các phương thức và thuộc tính chung giữa các đối tượng.
+- Ứng dụng: Tạo các đối tượng có phương thức chung: Các đối tượng có thể chia sẻ cùng một phương thức mà không cần định nghĩa lại.
