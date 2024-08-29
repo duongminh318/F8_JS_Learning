@@ -150,7 +150,12 @@
   --> b 1
   --> c 2
   ---> undefined
+# 4.2 findlast()
+  - giống find nhưng tìm từ cuối mảng lên
 
+# 4.3 findindex
+  - trả về vị trí xuất hiện đầu tiên 
+  - không tìm thấy trả về -1
 # 5. filter()
   >> cú pháp
   <tên_mảng>.filter(function(<tham_số_1>, <tham_số_2>){

@@ -111,3 +111,37 @@
 
   VD: arrABC.slice(1, 2) -->  ['b']
   VD: arrABC.slice(0) --> ['a', 'b', 'c']
+
+  >> flat
+  + Làm phẳng mảng với mức độ cụ thể
+  
+  + ![alt](https://files.fullstack.edu.vn/f8-prod/public-images/6614ba3dc743f.png)
+
+  + syntax: let newArray = oldArray.flat(depth);
+  + depth là mức độ làm phẳng, mặc định là 1. Để làm phẳng tối đa mảng, sử dụng giá trị Infinity.
+  + Exaple:
+
+      // Làm phẳng mảng với độ sâu 1
+
+      const arr1 = [1, 2, [3, 4]];
+      const newArr1 = arr1.flat();
+      // hoặc: const newArr1 = arr1.flat(1);
+
+      console.log(newArr1);   //(4)[1, 2, 3, 4]
+
+      // Làm phẳng mảng với độ sâu 2
+
+      const arr2 = [1, 2, [3, 4, [5, 6]]];
+      const newArr2 = arr2.flat(2);
+
+      console.log(newArr2);   //(6) [1, 2, 3, 4, 5, 6]
+  
+  + Sử dụng Infinity để làm phẳng toàn bộ các mảng con.
+
+      let deeplyNested = [1, [2, [3, [4, [5]]]]];
+
+      let completelyFlat = deeplyNested.flat(Infinity);
+
+      console.log(completelyFlat);
+
+
