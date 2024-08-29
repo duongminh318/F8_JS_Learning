@@ -122,3 +122,12 @@ Khả năng mở rộng đối tượng:
 - giúp tối ưu bộ nhớ và tăng hiệu quả trong việc tái sử dụng mã nguồn. Khi một phương thức hoặc thuộc tính không tồn tại trên một đối tượng, JavaScript sẽ tìm kiếm trong chuỗi prototype.
 - tiết kiệm bộ nhớ bằng cách chia sẻ các phương thức và thuộc tính chung giữa các đối tượng.
 - Ứng dụng: Tạo các đối tượng có phương thức chung: Các đối tượng có thể chia sẻ cùng một phương thức mà không cần định nghĩa lại.
+
+# Create Object
+- tạo ra 1 biến thể object mới không dùng new
+- chỉ định function làm prototypes
+
+# valueOf() và toString()
+- ép kiểu 1 object về lại dạng nguyện thuỷ
++ valueOf() --> number (số)
++ toString() --> string (chuỗi)
