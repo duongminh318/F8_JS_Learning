@@ -16,7 +16,7 @@
 .tamgiac {
      /* position: absolute;*/
     color: white;
-    font-size: 20px;
+    font-size:25px;
     transition: 0.4s;
     color: black;
     cursor: pointer;
@@ -42,3 +42,8 @@
     right: 10px;
 }
 
+.tamgiactrang{color: white;}
+.ra{
+    opacity: 1;
+    visibility: visible;
+}

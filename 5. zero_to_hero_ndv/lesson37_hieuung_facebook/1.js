@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded",function() {
 
 		//dùng cách đổi class
 		this.classList.toggle('tamgiactrang');
+		danhsach.classList.toggle('ra'); // thêm class ra vào
 
 	}
 },false);
