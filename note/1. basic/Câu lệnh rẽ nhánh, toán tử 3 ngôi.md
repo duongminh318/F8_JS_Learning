@@ -1,4 +1,13 @@
 # 1. if, else if, else
+Câu lệnh if trong JavaScript được sử dụng để kiểm tra một điều kiện. Nếu điều kiện đó đúng, thì mã trong khối if sẽ được thực thi. Nếu điều kiện sai, mã trong khối else (nếu có) sẽ được thực thi.
+
+if (condition) {
+    // Code to be executed if the condition is true
+} else {
+    // Code to be executed if the condition is false
+}
+
+
   >> cú pháp
   if(<dieu_kien>){
         --code--

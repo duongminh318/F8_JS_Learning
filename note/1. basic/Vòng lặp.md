@@ -17,6 +17,7 @@
   
   - (1) <bieu_thuc_1> --> <bieu_thuc_2> --> code --> <bieu_thuc_3> --> (2) <bieu_thuc_2> --> code --> <bieu_thuc_3> --> (3) <bieu_thuc_2> --> code --> <bieu_thuc_3>
     cứ tiếp tục như vậy đến khi biểu thức điều kiện sai
+- sử dụng khi biết chính xác số vòng cần lặp, có kiểm soát
 
 # 2. Vòng lặp for in (lặp qua key của đối tượng)
   >> cú pháp
