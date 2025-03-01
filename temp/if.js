@@ -1,13 +1,14 @@
 console.log("___IF__ ");
 
 // example
-// let age = 18;
+let age = 17;
 
-// if (age >= 18) {
-//     console.log("Bạn đủ tuổi trưởng thành.");
-// } else {
-//     console.log("Bạn chưa đủ tuổi trưởng thành.");
-// }
+if (age >= 18) {
+    console.log("Bạn đủ tuổi trưởng thành.");
+} else {
+    console.log("Bạn chưa đủ tuổi trưởng thành.");
+}
+
 
 
 // let age = prompt("Nhập số tuổi của bạn:");
@@ -28,22 +29,34 @@ console.log("___IF__ ");
 // }
 
 
-let day = parseInt(prompt("Mời bạn nhập thứ vào nhé (1-7):"));
+//let day = parseInt(prompt("Mời bạn nhập thứ vào nhé (1-7):"));
+// let day=1;
+// if (day === 1) {
+//     console.log("Thứ Hai");
+// } else if (day === 2) {
+//     console.log("Thứ Ba");
+// } else if (day === 3) {
+//     console.log("Thứ Tư");
+// } else if (day === 4) {
+//     console.log("Thứ Năm");
+// } else if (day === 5) {
+//     console.log("Thứ Sáu");
+// } else if (day === 6) {
+//     console.log("Thứ Bảy");
+// } else if (day === 7) {
+//     console.log("Chủ Nhật");
+// } else {
+//     console.log("Số không hợp lệ");
+// }
 
-if (day === 1) {
-    console.log("Thứ Hai");
-} else if (day === 2) {
-    console.log("Thứ Ba");
-} else if (day === 3) {
-    console.log("Thứ Tư");
-} else if (day === 4) {
-    console.log("Thứ Năm");
-} else if (day === 5) {
-    console.log("Thứ Sáu");
-} else if (day === 6) {
-    console.log("Thứ Bảy");
-} else if (day === 7) {
-    console.log("Chủ Nhật");
-} else {
-    console.log("Số không hợp lệ");
-}
+
+// Ví dụ if else if trong JS
+// let x = 50;
+
+// if (x < 10 ) {
+//     console.log("X là số có 1 chữ số");
+// } else if (x < 100) {
+//     console.log("X là số có 2 chữ số");
+// } else {
+//     console.log("X là số có nhiều hơn 2 chữ số");
+// }
