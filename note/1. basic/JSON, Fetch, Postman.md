@@ -1,25 +1,35 @@
-# 1. JSON
+# 1. JSON (Javascript Object Notation)
   - là một định dạng dữ liệu (chuỗi)
   - biểu hiện được kiểu dữ liệu: String, Number, Boolean, Null, Array, Object
-  - JSON.stringify(<biến>): chuyển từ kiểu dữ liệu JavaScript --> JSON
+  - Có thể chuyển đổi qua lại giữa json <---> cáckiểu dl trong js
+  - JSON.stringify(<biến>): chuyển từ kiểu dữ liệu JavaScript --> JSON 
   - JSON.parse(<biến>): chuyển từ kiểu dữ liệu JSON --> JavaScript
 
   VD: chuyển từ JSON --> JavaScript
-     var json1 = '"Tran Trong Nam"'
-     var json2 = '[1, 2, 3]'
-     var json3 = '{"name": "Trong Nam", "age": 18}'
-     console.log(JSON.parse(json1)) --> Tran Trong Nam
-     console.log(JSON.parse(json2)) --> [1, 2, 3]
-     console.log(JSON.parse(json3)) --> {name: 'Trong Nam', age: 18}
+     var json1 = '"Tran Trong Nam"'; // JSON dạng chuỗi
+      var json2 = '[1, 2, 3]';       // JSON dạng mảng
+      var json3 = '{"name": "Trong Nam", "age": 18}'; // JSON dạng object
+
+      console.log(JSON.parse(json1)); // Output: Tran Trong Nam (kiểu string)
+      console.log(JSON.parse(json2)); // Output: [1, 2, 3] (kiểu array)
+      console.log(JSON.parse(json3)); // Output: {name: 'Trong Nam', age: 18} (kiểu object)
+
 
   VD: chuyển từ JavaScript --> JSON
-     var json1 = 'Tran Trong Nam'
-     var json2 = [1, 2, 3]
-     var json3 = {name: Trong Nam, age: 18}
-     console.log(JSON.stringify(json1)) --> "Tran Trong Nam"
-     console.log(JSON.parse(json2)) --> [1, 2, 3]
-     console.log(JSON.parse(json3)) --> {name: 'Trong Nam', age: 18}
-     console.log(typeof JSON.stringify(json1), typeof JSON.stringify(json2), typeof JSON.stringify(json3)) --> string string string
+     var js1 = 'Dương Khởi Minh'; // string
+      var js2 = [1, 2, 3];          // array
+      var js3 = { name: 'Trong Nam', age: 18 }; // object
+
+console.log(JSON.stringify(js1)); // Output: "Dương Khởi Minh"
+console.log(JSON.stringify(js2)); // Output: "[1,2,3]"
+console.log(JSON.stringify(js3)); // Output: "{"name":"Trong Nam","age":18}"
+
+// Kiểm tra kiểu dữ liệu sau khi stringify
+console.log(
+    typeof JSON.stringify(js1), // "string"
+    typeof JSON.stringify(js2), // "string"
+    typeof JSON.stringify(js3)  // "string"
+);
 
 # 2. Sync - đồng bộ
   - code nào viết trước chạy trước, viết sau chạy sau
